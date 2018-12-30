@@ -5,4 +5,11 @@
   <ItemGroup>
     <PackageReference Include="MonoDevelop.Addins" Version="0.4.4" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Commands\CleanCompressSolutionCommand.cs" />
+  </ItemGroup>
 </Project>

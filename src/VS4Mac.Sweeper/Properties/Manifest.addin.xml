@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Addin
+    id = "com.jsuarezruiz.sweeper">
+    <Header>
+        <Name>Sweeper Addin</Name>
+        <Description>VS4Mac addin with functionality related to cleaning the output.</Description>
+        <Author>Javier Suárez</Author>
+        <Copyright>Javier Suárez</Copyright>
+        <Url>https://github.com/jsuarezruiz/VSMac-Sweeper</Url>
+    </Header>
+    <Extension 
+        path="/MonoDevelop/Ide/Commands">
+        <Command 
+            id="Sweeper.Commands.CleanBinObjDirsCommand" 
+            _label="Clean /bin and /obj Directories" 
+            defaultHandler="VS4Mac.Sweeper.Commands.CleanBinObjDirsCommand" />
+        <Command 
+            id="Sweeper.Commands.CleanPackagesDirCommand" 
+            _label="Clean /packages Directory" 
+            defaultHandler="VS4Mac.Sweeper.Commands.CleanPackagesDirCommand" />
+    </Extension>
+    <Extension 
+        path="/MonoDevelop/Ide/MainMenu/Build">
+        <CommandItem 
+            id="Sweeper.Commands.CleanBinObjDirsCommand" />
+        <CommandItem 
+            id="Sweeper.Commands.CleanPackagesDirCommand" />        
+    </Extension>
+    <Extension 
+        path="/MonoDevelop/Ide/ContextMenu/ProjectPad">
+        <Condition 
+            id="ItemType" 
+            value="Project|Solution">
+            <CommandItem 
+                id="Sweeper.Commands.CleanBinObjDirsCommand"
+                insertafter="MonoDevelop.Ide.Commands.ProjectCommands.Clean" 
+                insertbefore="MonoDevelop.Ide.Commands.ProjectCommands.Unload"  />
+            <CommandItem 
+                id="Sweeper.Commands.CleanPackagesDirCommand"
+                insertafter="MonoDevelop.Ide.Commands.ProjectCommands.Clean" 
+                insertbefore="MonoDevelop.Ide.Commands.ProjectCommands.Unload"  />
+        </Condition>
+    </Extension>
+</Addin>
