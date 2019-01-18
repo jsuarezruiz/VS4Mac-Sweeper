@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Addin
-    id = "com.jsuarezruiz.sweeper">
+    id = "MonoDevelop.Sweeper">
     <Header>
         <Name>Sweeper Addin</Name>
         <Description>VS4Mac addin with functionality related to cleaning the output.</Description>
-        <Author>Javier Suárez</Author>
-        <Copyright>Javier Suárez</Copyright>
+        <Author>Javier Suárez Ruiz</Author>
+        <Copyright>Javier Suárez Ruiz</Copyright>
         <Url>https://github.com/jsuarezruiz/VSMac-Sweeper</Url>
     </Header>
     <Extension 
