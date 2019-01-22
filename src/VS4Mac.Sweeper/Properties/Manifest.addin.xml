@@ -17,14 +17,20 @@
         <Command 
             id="Sweeper.Commands.CleanPackagesDirCommand" 
             _label="Clean /packages Directory" 
-            defaultHandler="VS4Mac.Sweeper.Commands.CleanPackagesDirCommand" />
+            defaultHandler="VS4Mac.Sweeper.Commands.CleanPackagesDirCommand" /> 
+        <Command 
+            id="Sweeper.Commands.ZipSolutionCommand" 
+            _label="Zip Solution" 
+            defaultHandler="VS4Mac.Sweeper.Commands.ZipSolutionCommand" />
     </Extension>
     <Extension 
         path="/MonoDevelop/Ide/MainMenu/Build">
         <CommandItem 
             id="Sweeper.Commands.CleanBinObjDirsCommand" />
         <CommandItem 
-            id="Sweeper.Commands.CleanPackagesDirCommand" />        
+            id="Sweeper.Commands.CleanPackagesDirCommand" />   
+            <CommandItem 
+            id="Sweeper.Commands.ZipSolutionCommand" />   
     </Extension>
     <Extension 
         path="/MonoDevelop/Ide/ContextMenu/ProjectPad">
@@ -37,6 +43,10 @@
                 insertbefore="MonoDevelop.Ide.Commands.ProjectCommands.Unload"  />
             <CommandItem 
                 id="Sweeper.Commands.CleanPackagesDirCommand"
+                insertafter="MonoDevelop.Ide.Commands.ProjectCommands.Clean" 
+                insertbefore="MonoDevelop.Ide.Commands.ProjectCommands.Unload"  />
+            <CommandItem 
+                id="Sweeper.Commands.ZipSolutionCommand"
                 insertafter="MonoDevelop.Ide.Commands.ProjectCommands.Clean" 
                 insertbefore="MonoDevelop.Ide.Commands.ProjectCommands.Unload"  />
         </Condition>

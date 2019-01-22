@@ -1,11 +1,19 @@
 ﻿using System.Collections.Generic;
 using MonoDevelop.Core;
 using MonoDevelop.Ide;
+using MonoDevelop.Projects;
 
 namespace VS4Mac.Sweeper.Helpers
 {
     public static class ProjectHelper
     {
+        public static Solution GetCurrentSolution()
+        {
+            var solution = IdeApp.ProjectOperations.CurrentSelectedSolution;
+
+            return solution;
+        }
+
         public static bool IsProjectReady()
         {
             var isBuilding = IdeApp.ProjectOperations.IsBuilding(IdeApp.ProjectOperations.CurrentSelectedSolution);
